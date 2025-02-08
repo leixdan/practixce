@@ -25,6 +25,8 @@ func main() {
 	if err != nil {
 		fmt.Println("Chiko, debes ingresar un número")
 		return
+
+	//Variable de los pinchos
 	}
 	if edad >= 15 && pinchos >= 10 {
 		fmt.Println("Puedes pasar chiko, disfruta el viaje.")
