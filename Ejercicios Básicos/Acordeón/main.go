@@ -92,6 +92,33 @@ func main() {
 	fmt.Println("Resultado de sumar:", resultado)
 }
 
+// Mapa con estructura
+func main() {
+	// Mapa con estructura como valor
+	mapa := map[string]Persona{
+		"juan": Persona{
+			Nombre: "Juan",
+			Edad:   30,
+			Ciudad: "Madrid",
+		},
+	}
+
+	fmt.Println("Mapa con estructura:", mapa)
+}
+
+// Mapa desde cero
+func main() {
+	// Crear un mapa vacío
+	mapa := make(map[string]int)
+
+	// Agregar elementos al mapa
+	mapa["manzana"] = 5
+	mapa["banana"] = 8
+	mapa["cereza"] = 3
+
+	fmt.Println("Mapa:", mapa)
+}
+
 /*________________________*/
 /* Estructuras (Structs) */
 
