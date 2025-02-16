@@ -106,6 +106,7 @@ func main() {
 	fmt.Println("Mapa con estructura:", mapa)
 }
 
+
 // Mapa desde cero
 func main() {
 	// Crear un mapa vacío
@@ -117,6 +118,33 @@ func main() {
 	mapa["cereza"] = 3
 
 	fmt.Println("Mapa:", mapa)
+
+	// Eliminar un elemento del mapa
+	delete(mapa, "banana")
+	fmt.Println("Mapa después de eliminar:", mapa)
+
+	// Verificar si una clave existe en el mapa
+	valor, ok := mapa["banana"]
+	fmt.Println("Valor de banana:", valor, "¿Existe?", ok)
+
+	// Recorrer el mapa
+	for clave, valor := range mapa {
+		fmt.Println("Clave:", clave, "Valor:", valor)
+	}
+
+	// Longitud del mapa
+	fmt.Println("Longitud del mapa:", len(mapa))
+
+	// Agregar un elemento al mapa si no existe desde una función
+	agregarElemento(mapa, "banana", 10)
+	fmt.Println("Mapa después de agregar:", mapa)
+
+	// Función para agregar un elemento al mapa si no existe
+	func agregarElemento(m map[string]int, clave string, valor int) {
+		if _, ok := m[clave]; !ok { // Verificar si la clave no existe
+			m[clave] = valor // Agregar elemento al mapa
+		}
+	}
 }
 
 /*________________________*/
