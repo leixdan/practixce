@@ -13,7 +13,7 @@ func main() {
 	fmt.Println(gang[2]) // print the third element
 
 	// slice
-	var ganga = []string{}
+	var ganga = []string{} // El mapa se declaran con llaves vacias
 
 	ganga = append(ganga, "Tania") // element 0 is Piedrita
 	ganga = append(ganga, "Ally") // element 1 is Monstera
