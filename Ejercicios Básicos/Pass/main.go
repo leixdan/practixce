@@ -3,14 +3,17 @@ package main
 import "fmt"
 
 func main() {
-
+//Usuario y contraseña a comparar
 	useradmin := "King"
 	passadmin := "1234"
 
+//Variables a usar y leer para el inicio de sesión
 	var user string
 	var pass string
 	var log bool
+	//var try int
 
+//Ciclo del login
 	for {
 
 		fmt.Println("¿Cuál es tu usuario?: ")
@@ -26,7 +29,6 @@ func main() {
 			log = false
 			break
 		} else {
-			fmt.Println("Usuario incorrecto")
 			break
 		}
 	}
