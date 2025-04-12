@@ -4,6 +4,7 @@ import (
 "calculadora/Operaciones"
 "calculadora/Utils"
 "fmt"
+
 )
 
 func main(){
@@ -21,10 +22,10 @@ func main(){
 	fmt.Println("4. División") */
 	fmt.Scan(&op)
 
-	if op != 1 || op != 2 {
+	/*if op != 1 || op != 2 {
 		fmt.Println("Elige una opción prro")
-		
-	}
+		utils.TerminarPrograma()
+	}*/
 
 //Solicitud de los dos números al usuario (a y b)
 fmt.Println("Ingresa el primer número: ")
