@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-	"sombrero_seleccionador/preguntas"
 )
+
 func main() {
 
 	//Variables
