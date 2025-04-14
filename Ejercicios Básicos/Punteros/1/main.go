@@ -8,7 +8,7 @@ func duplicar(n int) int { //Ej 1
 	return n * 2
 }
 
-func duplicarPuntero(n *int) { //Ej 2
+func triplicarPuntero(n *int) { //Ej 2
 	*n = *n * 3
 }
 
@@ -26,6 +26,6 @@ func main() {
 
 	//Ejercicio 2
 	fmt.Println("Número triplicado por puntero: ")
-	duplicarPuntero(&dup)
+	triplicarPuntero(&dup)
 	fmt.Println("El resultado es:", dup)
 }
