@@ -2,7 +2,10 @@
 
 package main
 
-import "fmt"
+import 
+	"fmt"
+
+
 //Ej 1
 func duplicar(n int) int { //Ej 1
 	return n * 2
@@ -17,9 +20,17 @@ func cambiarNombre(name *string, nuevo string){
 }
 //Ej 4
 func intercambiar(a, b *int){
-	*a = b
-	*b = a
+	*a, *b = *b, *a
 }
+//Ej 5
+type Persona struct{
+	nombre string
+	edad int
+}
+func (p *Persona) cumpleaños (){
+	p.edad++
+}
+
 
 
 func main() {
@@ -58,5 +69,23 @@ func main() {
 	fmt.Printf("Tenemos la variable a con valor: %d y la variable b con valor: %d\n", a, b)
 	fmt.Println("Haz que se intercambien neita")
 
+	intercambiar(&a, &b)
+
+	fmt.Println("El nuevo valor de a: ",a)
+	fmt.Println("El nuevo valor de b: ",b)
+
 	fmt.Println("=================================================")
+
+	//Ejercicio 5 - Incrementar edad en una estructura
+
+	p := Persona{
+		nombre: "Florecita",
+		edad: 23,
+	}
+	
+	fmt.Println(p)
+	fmt.Println("Vamos a actualizar a Florecita, el ya cumple años ñerito")
+	p.cumpleaños()
+	fmt.Println(p)
+
 }
