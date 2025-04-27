@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 type Figura interface { // Toda figura tiene un area
 	Area() float64
 }
@@ -17,20 +19,23 @@ func (r Rectangulo) Area() float64 { // Implementación del método Area para Re
 type Circulo struct {
 	Radio float64
 }
+
 func (c Circulo) Area() float64 { // Implementación del método Area para Círculo
 	return 3.14 * c.Radio * c.Radio
 }
 
-//Función que recibe una figura y devuelve su área
-func ImprimirArea (f Figura) float64 { //Se usa la interfaz Figura como tipo de parámetro
+// Función que recibe una figura y devuelve su área
+func ImprimirArea(f Figura) { //Se usa la interfaz Figura como tipo de parámetro
 	// Se puede pasar cualquier figura que implemente el método Area
-	return f.Area()
+	fmt.Printf("El área de la figura es: %.2f\n", f.Area())
 }
 
 func main() {
 
+	r := Rectangulo{Ancho: 10, Alto: 5}
+	c := Circulo{Radio: 3}
 
-
-
+	ImprimirArea(r)
+	ImprimirArea(c)
 
 }
