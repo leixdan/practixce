@@ -1,13 +1,16 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"sombrero_seleccionador/Preguntas"
+)
 
 func main() {
 
 	//Variables
 	var ready, name string
 	var respuesta string
-	//var Resultado int
+	var puntaje preguntas.Puntaje
 
 	fmt.Println("Hola, bienvenida o bienvenido al sombrero seleccionador")
 	fmt.Println("A través de un breve quiz lograremos saber a que casa perteneces")
@@ -29,6 +32,7 @@ func main() {
 		fmt.Println("c) Lealtad")
 		fmt.Println("d) Ambición")
 		fmt.Scan(&respuesta)
+		preguntas.SumarRespuesta(&puntaje, &respuesta)
 
 		fmt.Println("En un conflicto, tu primera reacción suele ser: ")
 		fmt.Println("a) Enfrentarlo directamente")

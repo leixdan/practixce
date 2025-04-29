@@ -1,4 +1,4 @@
-package main
+package preguntas
 
 //Es mejor hacerlo en un struct perrito
 
