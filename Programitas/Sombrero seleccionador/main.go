@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"sombrero_seleccionador/Preguntas"
+	preguntas "sombrero_seleccionador/Preguntas"
 )
 
 func main() {
@@ -39,25 +39,32 @@ func main() {
 		fmt.Println("b) Analizar la situación antes de actuar")
 		fmt.Println("c) Buscar una solución pacífica")
 		fmt.Println("d) Usarlo a tu favor")
+		fmt.Scan(&respuesta)
+		preguntas.SumarRespuesta(&puntaje, &respuesta)
 
 		fmt.Println("¿Qué tipo de personas prefieres tener cerca?: ")
 		fmt.Println("a) Valientes y decididas")
 		fmt.Println("b) Curiosas y creativas")
 		fmt.Println("c) Amables y confiables")
 		fmt.Println("d) Motivadas y ambiciosas")
+		fmt.Scan(&respuesta)
+		preguntas.SumarRespuesta(&puntaje, &respuesta)
 
 		fmt.Println("Tu lugar ideal para estudiar o trabajar sería: ")
 		fmt.Println("a) Un lugar lleno de acción, aunque ruidoso")
 		fmt.Println("b) Una biblioteca silenciosa")
 		fmt.Println("c) Un rincón acogedor con amigos")
 		fmt.Println("d) Una oficina moderna con vista al éxito")
+		fmt.Scan(&respuesta)
+		preguntas.SumarRespuesta(&puntaje, &respuesta)
 
 		fmt.Println("Si ganaras un premio importante, ¿cómo reaccionarías?: ")
 		fmt.Println("a) Lo celebrarías con entusiasmo y orgullo")
 		fmt.Println("b) Te sentirías honrado, pero seguirías con tus estudios")
 		fmt.Println("c) Lo compartirías con quienes te ayudaron")
 		fmt.Println("d) Lo usarías como impulso para llegar aún más lejos")
-
+		fmt.Scan(&respuesta)
+		preguntas.SumarRespuesta(&puntaje, &respuesta)
 	}
-
+	fmt.Println(puntaje.A, puntaje.B, puntaje.C, puntaje.D)
 }
