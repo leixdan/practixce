@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	preguntas "sombrero_seleccionador/Preguntas"
+	"os"
 )
 
 func main() {
@@ -19,6 +20,7 @@ func main() {
 
 	if ready == "n" || ready == "N" {
 		fmt.Println("Decidieste no continuar, bye")
+		os.Exit(0)
 	} else {
 		println("Bien, ¿cuál es tu nombre? ")
 		fmt.Scan(&name)
@@ -66,5 +68,6 @@ func main() {
 		fmt.Scan(&respuesta)
 		preguntas.SumarRespuesta(&puntaje, &respuesta)
 	}
+
 	fmt.Println(puntaje.A, puntaje.B, puntaje.C, puntaje.D)
 }
