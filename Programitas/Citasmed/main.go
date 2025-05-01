@@ -15,7 +15,7 @@ func main() {
 	fmt.Println("Bienvenido al consultorio médico")
 	funciones.Init()
 
-	MX112 := agenda.Beneficiario{
+	MX6 := agenda.Beneficiario{
 		Nombre:      "Queso",
 		Edad:        3,
 		Consultorio: 5,
@@ -25,6 +25,12 @@ func main() {
 			Colonia:    "Azteca",
 			Delegación: "Venustiano Carranza",
 		},
+	}
+	//Si no declaro "MX6" como clave para el mapa, no furula
+	agenda.Agenda["MX6"] = MX6
+
+	for clave, beneficiario := range agenda.Agenda {
+		fmt.Printf("Clave: %s\n Datos:%+v\n", clave, beneficiario)
 	}
 
 }
