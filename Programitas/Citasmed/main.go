@@ -4,9 +4,27 @@
 
 package main
 
-import "fmt"
+import (
+	"citasmed/agenda"
+	"citasmed/funciones"
+	"fmt"
+)
 
 func main() {
 
 	fmt.Println("Bienvenido al consultorio médico")
+	funciones.Init()
+
+	MX112 := agenda.Beneficiario{
+		Nombre:      "Queso",
+		Edad:        3,
+		Consultorio: 5,
+		Horario:     "M",
+		Domicilio: agenda.Adress{
+			Calle:      "Emiliano Zapata 67",
+			Colonia:    "Azteca",
+			Delegación: "Venustiano Carranza",
+		},
+	}
+
 }
