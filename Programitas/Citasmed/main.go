@@ -30,7 +30,7 @@ func main() {
 	agenda.Agenda["MX6"] = MX6
 
 	for clave, beneficiario := range agenda.Agenda {
-		fmt.Printf("Clave: %s\n Datos:%+v\n", clave, beneficiario)
+		fmt.Printf("Clave: %s\nDatos:%+v\n", clave, beneficiario)
 	}
 
 }
