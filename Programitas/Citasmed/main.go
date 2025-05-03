@@ -33,4 +33,6 @@ func main() {
 		fmt.Printf("Clave: %s\nDatos:%+v\n", clave, beneficiario)
 	}
 
+	funciones.RevisarConsultorios()
+
 }
