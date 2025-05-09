@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-	preguntas "sombrero_seleccionador/Preguntas"
 	"os"
+	preguntas "sombrero_seleccionador/Preguntas"
 )
 
 func main() {
@@ -70,4 +70,10 @@ func main() {
 	}
 
 	fmt.Println(puntaje.A, puntaje.B, puntaje.C, puntaje.D)
+	//Ya se calcula el resultado, ahora toca que compare y sólo muestre el de mayor puntaje.
+
+	if puntaje.A > puntaje.B && puntaje.A > puntaje.C && puntaje.A > puntaje.D {
+		fmt.Printf()
+	}
+
 }
