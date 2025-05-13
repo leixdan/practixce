@@ -1,53 +1,69 @@
+//Catálogo multimedia
+//Mezcla de libros, películas y podcasts.
+//Cada uno tiene distintos metadatos (autor, duración, género).
+//Necesitas crear una vista ordenada por título o tipo de contenido.
+
 package main
 
 import "fmt"
 
-//Primero definimos la estructura que será base para la interfáz y los métodos
-
-type pokemon struct {
-	Nombre string
-	Tipo   string
-	Altura float32
+// Primero definimos la estructura que será base para la interfáz y los métodos
+type books struct {
+	Nombre    string
+	Editorial string
+	Autor     string
+	Año       int
 }
 
-type digimon struct {
-	Nombre string
-	Tipo   string
-	Altura float32
+type movies struct {
+	Nombre   string
+	Director string
+	Género   string
+	Año      int
 }
 
-// Método de Pokemon
-func (p pokemon) describir() {
-	fmt.Printf("Veamos los datos del pokemon elegido:\n")
-	fmt.Printf("Nombre: %s\nTipo: %s\nAltura: %f\n", p.Nombre, p.Tipo, p.Altura)
+type photos struct {
+	Nombre string
+	Estilo string
+	Autor  string
+	Año    int
+}
+
+// Métodos asociados
+func (m movies) Sound() {
+	fmt.Println("Este archivo multimedia tiene sonido")
+}
+
+func (b books) Pages() {
+	fmt.Println("Este archivo multimedia tiene páginas")
+}
+
+// Interfaces
+type Audio interface {
+	Sound() string
+}
+
+type Page interface {
+	Pages() string
 }
 
 func main() {
 
-	var choose int
-
-	garchomp := pokemon{
-		Nombre: "Garchomp",
-		Tipo:   "Dragón / Tierra",
-		Altura: 1.90,
+	cl := books{
+		Nombre:    "Cuervo y Luna",
+		Editorial: "Atipica Espectral",
+		Autor:     "Katherine",
+		Año:       2025,
 	}
 
-	togekiss := pokemon{
-		Nombre: "Togekiss",
-		Tipo:   "Hada / Volador",
-		Altura: 1.50,
+	mm := movies{
+		Nombre:   "Mad max",
+		Director: "Nasus",
+		Género:   "Acción",
+		Año:      2021,
 	}
 
-	fmt.Println("Ingresa el número del poke a revisar:")
-	fmt.Println("1. Garchomp")
-	fmt.Println("2. Togekiss")
-	fmt.Scan(&choose)
-
-	switch choose {
-	case 1:
-		garchomp.describir()
-	case 2:
-		togekiss.describir()
-	}
+	cl.Pages()
+	mm.Sound()
 
 }
