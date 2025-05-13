@@ -30,21 +30,39 @@ type photos struct {
 }
 
 // Métodos asociados
-func (m movies) Sound() {
-	fmt.Println("Este archivo multimedia tiene sonido")
+func (m movies) Sound() string {
+	return "Este archivo multimedia tiene sonido"
 }
-
-func (b books) Pages() {
-	fmt.Println("Este archivo multimedia tiene páginas")
+func (b books) Pages() string {
+	return "Este archivo multimedia tiene páginas"
+}
+func (p photos) Images() string {
+	return "Este archivo multimedia tiene imágenes"
 }
 
 // Interfaces
-type Audio interface {
+type Sounds interface {
 	Sound() string
+}
+
+func itSounds(s Sounds) {
+	fmt.Println(s.Sound())
 }
 
 type Page interface {
 	Pages() string
+}
+
+func itPages(p Page) {
+	fmt.Println(p.Pages())
+}
+
+type Image interface {
+	Images() string
+}
+
+func itImages(i Image) {
+	fmt.Println(i.Images())
 }
 
 func main() {
@@ -63,7 +81,15 @@ func main() {
 		Año:      2021,
 	}
 
-	cl.Pages()
-	mm.Sound()
+	mc := photos{
+		Nombre: "Mi cielo",
+		Estilo: "B/N",
+		Autor:  "Jalapeño",
+		Año:    2023,
+	}
 
+	fmt.Println("Datos por interfaz")
+	itSounds(mm)
+	itPages(cl)
+	itImages(mc)
 }
