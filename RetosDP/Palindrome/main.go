@@ -13,7 +13,7 @@ func main() {
 
 	var palabra string
 
-	fmt.Println("Vamos a ver si tu palabra es un anagrama")
+	fmt.Println("Vamos a ver si tu palabra es un palíndromo")
 	fmt.Println("Ingresa tu palabra")
 	fmt.Scan(&palabra)
 	//revisar(&palabra)
