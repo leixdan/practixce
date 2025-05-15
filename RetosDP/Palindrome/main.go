@@ -2,13 +2,6 @@ package main
 
 import "fmt"
 
-/*func revisar(palabra *string) {
-
-	for i, l := range *palabra {
-		fmt.Printf("Índice: %d Letra: %c\n", i, l)
-	}
-}*/
-
 func main() {
 
 	var palabra string
@@ -22,7 +15,9 @@ func main() {
 	esPalindromo := true
 
 	for i, l := 0, len(slice_palabra)-1; i < l; i, l = i+1, l-1 {
+		fmt.Println(slice_palabra[i],slice_palabra[l])
 		if slice_palabra[i] != slice_palabra[l] {
+			fmt.Println(slice_palabra[i],slice_palabra[l])
 			esPalindromo = false
 			break
 		}
