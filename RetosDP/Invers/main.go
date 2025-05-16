@@ -12,8 +12,9 @@ func main (){
 
 	sSolicitud := []rune (solicitud)
 	var invertido string
-	
+
 	for p := len(sSolicitud)-1; p >= 0; p--{
+		fmt.Println(sSolicitud[p])
 		invertido += string(sSolicitud[p])
 	}
 
