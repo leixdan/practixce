@@ -14,6 +14,12 @@ func main() {
 	//Transformamos el string a rune
 	SEntrada := []rune(entrada)
 
-	utils.ModificarEntrada(&SEntrada)
-
+	//Lo mandamos a codificar:
+	utils.Codificar(SEntrada,3)
+	//Mandamos el slice y recibimos un string de:
+	utils.ConvertirEntrada(SEntrada)
+	//Mandado a decodificar
+	utils.Decodificar(SEntrada,3)
+	//Mandamos el slice y recibimos un string de:
+	utils.ConvertirEntrada(SEntrada)
 }

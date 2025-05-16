@@ -4,13 +4,25 @@ import (
 	"fmt"
 )
 
-// ModificarEntrada obtiene la respuesta del usuario y la modifica
-func ModificarEntrada(r *[]rune) {
+//Codificar obtiene el slice y lo modifica
+func Codificar(s []rune, shift int){
 
-	for s := len(SEntrada); s >= len(SEntrada); s + 28 {
-		fmt.Println(s)
+	for i := range s {
+		s[i] = s[i] + rune(shift)
 	}
 
-	fmt.Println(*r)
+}
+
+// ModificarEntrada obtiene la respuesta del usuario y la modifica
+func ConvertirEntrada(r []rune) {
+	fmt.Println(string(r))
+}
+
+//Decodificar obtiene el slice y lo modifica
+func Decodificar(s []rune, shift int){
+
+	for i := range s {
+		s[i] = s[i] - rune(shift)
+	}
 
 }
