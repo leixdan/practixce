@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main (){
+func main() {
 
 	var solicitud string
 
@@ -10,14 +10,14 @@ func main (){
 	fmt.Println("Ingresa la palabra que deseas invertir:")
 	fmt.Scan(&solicitud)
 
-	sSolicitud := []rune (solicitud)
+	sSolicitud := []rune(solicitud)
 	var invertido string
 
-	for p := len(sSolicitud)-1; p >= 0; p--{
+	for p := len(sSolicitud) - 1; p >= 0; p-- {
 		fmt.Println(sSolicitud[p])
 		invertido += string(sSolicitud[p])
 	}
 
-fmt.Println(invertido)
+	fmt.Println(invertido)
 
 }
