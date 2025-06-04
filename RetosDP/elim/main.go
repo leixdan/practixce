@@ -16,39 +16,36 @@ import (
 	"fmt"
 )
 
-var Out1, Out2 string
+var Sout1, Sout2 string
 
-func convers(sOut1 []rune, sOut2 []rune) { //(string, string) {
+func convers(sOut1 []rune, sOut2 []rune) {
 
-	for i := range sOut1 {
-		fmt.Println(sOut1[i])
+	for _,r1 := range sOut1 {
+		for _,r2 := range sOut2{
 
-		if sOut1[i] == sOut2[i] {
-			Out1 += string(sOut1[i])
+			if r1 == r2{
+				Sout1 += string(r1)
+				break
+			}
+	
 		}
-	}
-	fmt.Println("Fin de ciclo 1")
-	for i := range sOut2 {
-		fmt.Println(sOut2[i])
-	}
-
-	//out1 := string(r1)
-	//out2 := string(r2)
+}
 }
 
 func main() {
 
-	var str1, str2 string = "hada", "miada"
+	var str1, str2 string = "caramelo", "camaron"
 	sOut1 := []rune(str1)
 	sOut2 := []rune(str2)
 
-	fmt.Println("Ingresa las dos palabras")
+	//fmt.Println("Ingresa las dos palabras")
+	fmt.Println("Caramelo: ", sOut1)
+	fmt.Println("Camaron: ",sOut2)
 
 	convers(sOut1, sOut2)
+fmt.Println("_________________________")
 
-	fmt.Println(sOut1)
-	fmt.Println(sOut2)
-	fmt.Println("_________________________________")
-	fmt.Println(Out1)
+fmt.Println(Sout1)
+
 
 }
