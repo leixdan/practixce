@@ -1,34 +1,28 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
+
+type Mascota struct {
+	Nombre  string
+	Edad    int
+	Especie string
+}
+
+func cumpleaños(m *Mascota) {
+	m.Edad++
+}
 
 func main() {
 
-	fmt.Println("Este programa te ayudará a decidir si llevar o no paraguas hoy")
-
-	// Ingreso de datos del usuario
-	fmt.Println("¿Está nublado afuera? (y/n): ")
-	var r1 string
-	fmt.Scan(&r1)
-
-	if r1 == "y" {
-		fmt.Println("¿Cuántas horas estarás fuera?")
-		var r2 int
-		fmt.Scan(&r2)
-
-		if r1 == "y" && r2 <= 3 {
-			fmt.Println("No hace falta")
-		} else if r1 == "y" && r2 <= 5 {
-			fmt.Println("Si, deberías llevarlo")
-		} else {
-			fmt.Println("Pide un uber o mejor no salgas")
-		}
-	} else if r1 == "n" {
-		fmt.Println("No tendrías que estar usando este programa...")
-	} else {
-		fmt.Println("Ingresa una respuesta válida: y / n")
+	nasus := Mascota{
+		Nombre:  "Nasus",
+		Edad:    5,
+		Especie: "Perro",
 	}
 
+	fmt.Printf("El nombre de la mascota es: %s, tiene %d años y es un %s.\n", nasus.Nombre, nasus.Edad, nasus.Especie)
+
+	cumpleaños(&nasus)
+
+	fmt.Printf("Hoy cumplió años y ahora tiene: %d años\n", nasus.Edad)
 }
