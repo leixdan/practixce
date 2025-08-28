@@ -12,6 +12,7 @@ func cumpleaños(m *Mascota) {
 	m.Edad++
 }
 
+
 func main() {
 
 	nasus := Mascota{
