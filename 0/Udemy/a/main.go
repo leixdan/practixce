@@ -28,7 +28,7 @@ func jugar() {
 
 	for intentos < maxIntentos {
 		intentos++
-		fmt.Printf("Ingresa un número (intentos restantes: %d): /n", maxIntentos-intentos+1)
+		fmt.Printf("Ingresa un número (intentos restantes: %d): ", maxIntentos-intentos+1)
 		fmt.Scanln(&numIngresado)
 
 		if numIngresado == numRand {
