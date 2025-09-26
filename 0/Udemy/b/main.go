@@ -5,7 +5,7 @@ import "fmt"
 func main() {
 
 	fmt.Println("Bienvenidos")
-	muestra := []int{0, 1, 2, 3, 4, 5, 6, 7, 8, 9}
+	muestra := []int{100, 22, 31, 56, 90}
 	fmt.Println(muestra)
 
 	// Número mayor del slice
@@ -15,8 +15,8 @@ func main() {
 
 func mayor(slice []int) {
 	max := 0
-	fmt.Println(max)
 	for _, val := range slice {
+		fmt.Println(val)
 		if val > max {
 			max = val
 		}
